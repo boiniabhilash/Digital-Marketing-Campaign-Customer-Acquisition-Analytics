@@ -1,0 +1,15 @@
+traffic_source,traffic_medium,traffic_campaign,users,sessions,page_views,product_views,add_to_carts,checkouts,purchases,revenue
+google,organic,(organic),90376,113233,419320,117334,16328,11317,1552,97939.0
+(direct),(none),(direct),64512,85850,329993,94472,14185,9371,1358,87283.0
+(data deleted),(data deleted),(data deleted),6761,17938,94168,32206,6278,4396,735,48120.0
+<Other>,<Other>,<Other>,45346,55452,200200,55451,8489,5206,739,44520.0
+shop.googlemerchandisestore.com,referral,(referral),15763,22763,88543,26041,3940,2704,450,30143.0
+<Other>,referral,(referral),24901,31937,116777,32652,5141,3049,459,28090.0
+google,cpc,<Other>,13635,16621,59799,16091,2358,1501,227,15776.0
+<Other>,organic,(organic),8407,10473,38076,10627,1578,1037,149,9340.0
+(data deleted),(data deleted),<Other>,164,417,2347,884,189,149,17,765.0
+<Other>,(data deleted),(data deleted),120,280,1163,290,47,24,6,189.0
+google,<Other>,<Other>,1,1,2,0,0,0,0,0.0
+<Other>,referral,<Other>,1,1,4,0,0,0,0,0.0
+<Other>,cpc,<Other>,1,3,17,11,10,2,0,0.0
+(data deleted),referral,(referral),1,1,19,9,0,1,0,0.0

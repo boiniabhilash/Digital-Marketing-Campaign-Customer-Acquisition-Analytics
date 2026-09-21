@@ -1,0 +1,13 @@
+traffic_source,traffic_medium,users,sessions,page_views,product_views,add_to_carts,checkouts,shipping_info,payment_info,purchases,revenue
+google,organic,90376,113233,419320,117334,16328,11317,5737,3832,1552,97939.0
+(direct),(none),64512,85850,329993,94472,14185,9371,4739,3335,1358,87283.0
+(data deleted),(data deleted),6925,18355,96515,33090,6467,4545,2315,1974,752,48885.0
+<Other>,<Other>,45346,55452,200200,55451,8489,5206,2663,1745,739,44520.0
+shop.googlemerchandisestore.com,referral,15763,22763,88543,26041,3940,2704,1397,1059,450,30143.0
+<Other>,referral,24902,31938,116781,32652,5141,3049,1567,1042,459,28090.0
+google,cpc,13635,16621,59799,16091,2358,1501,776,579,227,15776.0
+<Other>,organic,8407,10473,38076,10627,1578,1037,513,317,149,9340.0
+<Other>,(data deleted),120,280,1163,290,47,24,13,14,6,189.0
+google,<Other>,1,1,2,0,0,0,0,0,0,0.0
+<Other>,cpc,1,3,17,11,10,2,1,0,0,0.0
+(data deleted),referral,1,1,19,9,0,1,1,2,0,0.0

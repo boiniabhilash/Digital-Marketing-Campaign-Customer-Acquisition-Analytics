@@ -1,0 +1,4 @@
+marketing_channel,impressions,clicks,ctr_pct,cpc,spend,simulated_conversions,cac,simulated_revenue,roas,ga4_users,ga4_sessions,ga4_product_views,ga4_add_to_carts,ga4_checkouts,ga4_purchasers,ga4_transactions,ga4_revenue,ga4_conversion_rate_pct,ga4_revenue_per_user,ga4_revenue_per_purchaser,ga4_aov,ga4_repeat_customer_rate_pct,data_model_status
+Display,1105234,27550,2.49,0.9,24794.33,552,44.92,38570.0,1.56,,,,,,,,,,,,,,SIMULATED_ADVERTISING_ONLY
+Google Ads,7736629,490382,6.34,1.28,629315.96,16137,39.0,1145371.07,1.82,15527,15538,14831,2033,1162,152,166,9056.0,0.98,0.58,59.58,54.55,8.55,GA4_OBSERVED + SIMULATED_ADVERTISING
+Meta Ads,4420935,102485,2.32,1.15,118186.14,2454,48.16,194257.83,1.64,,,,,,,,,,,,,,SIMULATED_ADVERTISING_ONLY
