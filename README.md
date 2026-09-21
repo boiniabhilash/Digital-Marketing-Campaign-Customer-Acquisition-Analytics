@@ -26,7 +26,7 @@ The business invests in multiple digital marketing channels but lacks a clear vi
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 
 | Tool                        | Purpose                                                      |
 | --------------------------- | ------------------------------------------------------------ |
