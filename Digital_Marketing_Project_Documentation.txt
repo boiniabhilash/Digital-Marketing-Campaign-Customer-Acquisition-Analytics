@@ -1,0 +1,704 @@
+Digital Marketing Campaign & Customer Acquisition Analytics
+End-to-end marketing analytics project analyzing customer acquisition, e-commerce funnel performance, campaign efficiency, customer behavior, and revenue using BigQuery SQL, Excel, and Power BI.
+
+## Executive Summary
+
+This project demonstrates an end-to-end **Digital Marketing and Customer Acquisition Analytics** workflow for a D2C/e-commerce business.
+
+The analysis combines **public GA4 e-commerce data** with a separately created **simulated advertising campaign dataset** to examine customer acquisition, website engagement, marketing-funnel performance, customer behavior, revenue, and advertising efficiency.
+
+Using **BigQuery and SQL**, the data was extracted, transformed, aggregated, and validated into analytical datasets. **Excel** was then used for KPI validation, exploratory analysis, pivot-table analysis, funnel analysis, customer analysis, and campaign analysis. Finally, **Power BI and DAX** were used to create an interactive four-page marketing analytics dashboard.
+
+The observed GA4 analysis identified key patterns in acquisition sources, funnel conversion, customer purchase behavior, repeat customers, and revenue contribution. The simulated advertising analysis demonstrated how metrics such as **CTR, CPC, conversion rate, CAC, and ROAS** can be used to evaluate campaign efficiency.
+
+A key methodological principle of the project was maintaining a clear separation between **observed GA4 performance and simulated advertising performance**, avoiding unsupported campaign-level attribution.
+
+The final outcome is a portfolio-ready analytics solution that demonstrates skills in **SQL, data transformation, Excel analysis, DAX, Power BI visualization, KPI development, data validation, funnel analysis, customer analytics, and business insight generation**.
+
+
+## Business Problem
+
+The business invests in multiple digital marketing channels to attract customers and generate online sales. However, marketing performance is not clearly understood across the customer journey.
+
+The key challenge is to identify:
+
+* Which acquisition sources bring the most users and revenue
+* Where customers drop off in the e-commerce funnel
+* How effectively users move from product views to purchases
+* How one-time and repeat customers contribute to revenue
+* Which simulated advertising campaigns generate stronger returns
+* How marketing performance can be improved using data-driven insights
+
+The objective of this project is to analyze the complete journey from **digital marketing and customer acquisition to website engagement, conversion, customers, and revenue**, and translate the findings into actionable business insights.
+
+## Project Objectives
+
+1. Analyze customer acquisition performance across different traffic sources and mediums.
+
+2. Measure the e-commerce marketing funnel from **product views → add to cart → checkout → purchase**.
+
+3. Identify major customer drop-off points and measure stage-level conversion rates.
+
+4. Analyze customer behavior by distinguishing **non-purchasers, one-time customers, and repeat customers**.
+
+5. Measure purchase frequency and understand its relationship with customer revenue.
+
+6. Evaluate simulated advertising campaigns using key marketing metrics such as **CTR, CPC, CVR, CAC, and ROAS**.
+
+7. Compare campaign performance across different advertising channels and campaign objectives.
+
+8. Build an interactive Power BI dashboard to communicate marketing performance and business insights.
+
+9. Validate analytical results across **BigQuery, Excel, and Power BI** to improve data accuracy and consistency.
+
+10. Translate analytical findings into practical recommendations for improving **customer acquisition, conversion, and marketing efficiency**.
+
+
+## Data & Methodology
+
+### Data Sources
+
+The project uses two complementary datasets:
+
+**1. Public GA4 E-commerce Data — Observed Data**
+
+A public Google Analytics 4 e-commerce sample dataset was used to analyze actual observed user behavior during the period **November 1, 2020 to January 31, 2021**.
+
+The analysis includes:
+
+* Users
+* Sessions
+* Page views
+* Product views
+* Add-to-cart events
+* Checkout events
+* Purchase events
+* Revenue
+* Acquisition source and medium
+* Customer purchase behavior
+
+**2. Simulated Advertising Campaign Data**
+
+A separate simulated advertising dataset was created to demonstrate campaign-level marketing analysis where campaign spend, impressions, clicks, conversions, and campaign revenue were required.
+
+The simulated dataset contains:
+
+* Google Ads
+* Meta Ads
+* Display
+* Six campaigns
+* Impressions
+* Clicks
+* Ad spend
+* Conversions
+* Campaign revenue
+
+All advertising metrics are explicitly identified as **SIMULATED**.
+
+### Data Processing
+
+The analysis followed an end-to-end workflow:
+
+**BigQuery / SQL**
+
+* Extracted relevant GA4 events
+* Filtered the analysis period
+* Created a user-level funnel dataset
+* Aggregated acquisition-source performance
+* Calculated funnel and customer metrics
+* Prepared campaign and integrated analysis tables
+
+**Excel**
+
+* Imported analytical tables
+* Validated BigQuery control totals
+* Created KPI summaries
+* Built pivot-table analyses
+* Analyzed funnel performance
+* Analyzed customer purchase frequency
+* Analyzed campaign performance
+
+**Power BI / DAX**
+
+* Created analytical measures
+* Built a date dimension
+* Created interactive KPI cards and visuals
+* Developed funnel analysis
+* Analyzed customer and acquisition performance
+* Built campaign efficiency dashboards
+* Added filtering and interactive exploration
+
+### Data Integrity Approach
+
+Observed GA4 revenue and simulated advertising revenue were kept separate.
+
+The simulated campaign revenue was **not combined with observed GA4 revenue**, because the public GA4 sample does not provide defensible campaign-level attribution for all simulated advertising channels.
+
+This separation prevents misleading conclusions and clearly distinguishes **observed business data from simulated advertising assumptions**.
+
+
+## Key KPIs
+
+### Observed GA4 KPIs
+
+| KPI              | Purpose                                                     |
+| ---------------- | ----------------------------------------------------------- |
+| Users            | Measures the number of unique users in the observed dataset |
+| Sessions         | Measures website visits/sessions                            |
+| Product Views    | Measures product-level engagement                           |
+| Add to Carts     | Measures users adding products to the cart                  |
+| Checkouts        | Measures users progressing to checkout                      |
+| Purchases        | Measures completed purchase events                          |
+| Revenue          | Measures observed e-commerce revenue                        |
+| Conversion Rate  | Measures purchases relative to observed users               |
+| AOV              | Measures average revenue per purchase                       |
+| Revenue per User | Measures observed revenue generated per user                |
+
+### Funnel KPIs
+
+| KPI                          | Purpose                                                                  |
+| ---------------------------- | ------------------------------------------------------------------------ |
+| View → Cart Rate             | Measures the percentage of product views resulting in add-to-cart events |
+| Cart → Checkout Rate         | Measures progression from cart to checkout                               |
+| Checkout → Purchase Rate     | Measures checkout completion                                             |
+| Product View → Purchase Rate | Measures the overall product-to-purchase journey                         |
+
+### Customer KPIs
+
+| KPI                             | Purpose                                                           |
+| ------------------------------- | ----------------------------------------------------------------- |
+| Purchasing Customers            | Users who completed at least one purchase                         |
+| Repeat Customers                | Users with more than one purchase event                           |
+| Repeat Customer Rate            | Measures repeat customers as a percentage of purchasing customers |
+| Revenue per Purchasing Customer | Measures revenue generated per purchasing customer                |
+| Purchase Frequency              | Measures how frequently users generated purchase events           |
+
+### Advertising KPIs
+
+| KPI          | Purpose                                                                     |
+| ------------ | --------------------------------------------------------------------------- |
+| Impressions  | Measures advertising exposure                                               |
+| Clicks       | Measures traffic generated by advertising                                   |
+| CTR          | Measures clicks relative to impressions                                     |
+| CPC          | Measures average advertising cost per click                                 |
+| Campaign CVR | Measures conversions relative to clicks                                     |
+| CAC          | Measures advertising spend per conversion                                   |
+| ROAS         | Measures simulated campaign revenue generated per unit of advertising spend |
+
+
+## Key Findings — Observed GA4 Performance
+
+### 1. Customer acquisition generated significant traffic, but conversion remained limited
+
+The observed dataset contains **269,989 unique users** and **5,692 purchase events** during the analysis period.
+
+Using unique observed users as the denominator, the user-level conversion rate is approximately **2.11%**.
+
+This indicates that a large proportion of observed users did not progress to a purchase.
+
+### 2. The largest funnel drop occurs between product engagement and purchase
+
+The observed funnel contains:
+
+* **386,068 Product Views**
+* **58,543 Add-to-Carts**
+* **38,757 Checkouts**
+* **5,692 Purchases**
+
+The stage conversion rates are:
+
+* Product View → Add to Cart: **15.16%**
+* Add to Cart → Checkout: **66.20%**
+* Checkout → Purchase: **14.69%**
+
+The relatively low checkout-to-purchase rate indicates that checkout completion is an important area for further investigation.
+
+### 3. Google organic generated the largest observed revenue contribution
+
+`google / organic` generated approximately **$95,775** in observed revenue and represented about **26.45% of observed revenue** in the acquisition-source analysis.
+
+It also accounted for approximately **31.04% of the source-level user volume**.
+
+This shows that organic search was a major traffic and revenue acquisition source in the observed dataset.
+
+### 4. Referral traffic showed strong revenue contribution relative to its user share
+
+`shop.googlemerchandisestore.com / referral` represented approximately **7.82% of source-level users** but contributed approximately **12.85% of observed revenue**.
+
+Its observed revenue per source user was approximately **$1.78**, compared with approximately **$1.09** across the source-level analysis.
+
+This suggests that this referral source generated relatively higher-value traffic.
+
+### 5. Repeat customers represented a smaller customer group but contributed substantial revenue
+
+There were **775 repeat customers**, representing approximately **17.54% of purchasing customers**.
+
+However, repeat customers generated approximately **$128,042**, or about **35.35% of observed purchaser revenue**.
+
+This demonstrates that repeat customers generated a disproportionately large share of revenue relative to their customer count.
+
+### 6. Revenue increased with purchase frequency
+
+Customers with higher purchase-event frequency generated higher revenue per customer.
+
+Average revenue per user within the purchasing-frequency groups increased from approximately:
+
+* **1 purchase:** $64.25
+* **2 purchases:** $138.35
+* **3 purchases:** $181.86
+* **4+ purchases:** $298.70
+
+This indicates a strong relationship between purchase frequency and customer revenue within the observed dataset.
+
+### 7. Observed monthly performance varied considerably
+
+Observed revenue was approximately:
+
+* **November 2020:** $144,260
+* **December 2020:** $160,555
+* **January 2021:** $57,350
+
+December recorded the highest observed revenue in the analysis period, while January showed a substantial decline.
+
+Monthly performance should therefore be considered when evaluating changes in traffic, engagement, and purchasing behavior.
+
+
+## Key Findings — Simulated Advertising Performance
+
+The following findings are based on the **simulated advertising dataset** and should not be interpreted as observed GA4 campaign attribution.
+
+### 1. Simulated campaign efficiency varied considerably
+
+Across the six simulated campaigns, ROAS ranged from approximately **0.71 to 2.47**.
+
+This demonstrates that campaign performance can vary substantially even within the same advertising program.
+
+### 2. Brand Search recorded the highest simulated ROAS
+
+The simulated Brand Search campaign generated:
+
+* Spend: **$274,757.51**
+* Conversions: **9,991**
+* CAC: **$27.50**
+* Simulated campaign revenue: **$679,412.48**
+* ROAS: **2.47**
+
+These figures are simulated campaign outputs rather than observed GA4 attribution.
+
+### 3. Prospecting had the highest simulated CAC
+
+The simulated Meta Ads Prospecting campaign generated:
+
+* Spend: **$52,068.01**
+* Conversions: **596**
+* CAC: **$87.36**
+* ROAS: **0.71**
+
+This indicates that the simulated campaign generated fewer conversions relative to its advertising spend than the other simulated campaigns.
+
+### 4. Non-Brand Search produced substantial traffic but lower simulated return
+
+The simulated Non-Brand Search campaign generated:
+
+* **99,179 clicks**
+* **2,184 conversions**
+* **$163,642.40 spend**
+* **$157,099.53 simulated revenue**
+* **0.96 ROAS**
+
+The campaign generated considerable traffic, but simulated revenue was below simulated advertising spend.
+
+### 5. Google Ads represented the largest simulated advertising investment
+
+Across the simulated dataset:
+
+* Google Ads spend: **$629,315.96**
+* Meta Ads spend: **$118,186.14**
+* Display spend: **$24,794.33**
+
+Google Ads therefore represented the majority of simulated advertising spend in this dataset.
+
+### 6. Simulated campaign performance should not be combined with observed GA4 revenue
+
+The campaign dataset was intentionally kept separate from observed GA4 revenue.
+
+Google Ads has a corresponding `google / cpc` acquisition source in the observed dataset, but the public GA4 sample does not provide sufficient campaign-level attribution to reliably connect each simulated campaign to observed purchases and revenue.
+
+Therefore, the analysis reports:
+
+**Observed GA4 performance** and **simulated advertising performance** separately.
+
+This preserves analytical transparency and avoids presenting simulated attribution as measured business performance.
+
+
+## Business Recommendations
+
+The recommendations below are derived from the observed GA4 analysis and the separately identified simulated advertising analysis.
+
+### 1. Investigate checkout abandonment
+
+The observed **Checkout → Purchase rate was 14.69%**, indicating substantial drop-off during the final conversion stage.
+
+The business should investigate potential causes such as:
+
+* Checkout usability
+* Payment failures
+* Unexpected costs
+* Shipping information requirements
+* Mobile checkout experience
+* Page-load performance
+* Trust and security concerns
+
+A funnel-focused optimization program could then be used to test improvements.
+
+### 2. Strengthen product-page-to-cart conversion
+
+The observed **Product View → Add-to-Cart rate was 15.16%**.
+
+The business could investigate product-page elements such as:
+
+* Product descriptions
+* Images and videos
+* Pricing presentation
+* Product availability
+* Calls to action
+* Reviews and social proof
+
+A/B testing can be used to determine which changes improve add-to-cart behavior.
+
+### 3. Investigate high-value acquisition sources
+
+Some acquisition sources generated a larger share of revenue relative to their share of users.
+
+For example, `shop.googlemerchandisestore.com / referral` generated approximately **12.85% of observed revenue** while representing approximately **7.82% of source-level users**.
+
+The business could investigate what characteristics make traffic from this source more valuable and whether similar referral opportunities exist.
+
+### 4. Develop a repeat-customer strategy
+
+Repeat customers represented approximately **17.54% of purchasing customers** but contributed approximately **35.35% of purchaser revenue**.
+
+Potential initiatives include:
+
+* Personalized follow-up campaigns
+* Product recommendations
+* Loyalty programs
+* Cross-selling
+* Post-purchase engagement
+* Re-engagement campaigns
+
+The objective would be to encourage additional purchases while monitoring incremental revenue and customer retention.
+
+### 5. Evaluate advertising campaigns using efficiency metrics
+
+The simulated campaign analysis demonstrates the importance of evaluating campaigns using multiple metrics rather than clicks alone.
+
+Campaign evaluation should consider:
+
+* CTR
+* CPC
+* Conversion Rate
+* CAC
+* ROAS
+* Conversion volume
+* Revenue contribution
+
+In an actual business environment, budget decisions should be based on validated campaign-attribution data rather than the simulated results used in this portfolio project.
+
+### 6. Investigate seasonal and monthly performance changes
+
+Observed revenue changed substantially across the analysis period, from approximately **$144,260 in November** to **$160,555 in December**, followed by **$57,350 in January**.
+
+The business should investigate whether these changes are associated with:
+
+* Seasonal demand
+* Promotional activity
+* Changes in traffic quality
+* Product availability
+* Marketing activity
+* Customer purchasing behavior
+
+### 7. Establish an ongoing marketing performance dashboard
+
+The Power BI dashboard can be used as a framework for ongoing monitoring.
+
+A production version could track:
+
+* Acquisition
+* Funnel conversion
+* Customer retention
+* Revenue
+* Campaign spend
+* CAC
+* ROAS
+* Channel performance
+
+This would allow marketing teams to monitor performance continuously and identify changes requiring further investigation.
+
+
+## Technical Implementation
+
+### BigQuery & SQL
+
+BigQuery was used as the primary data-processing environment.
+
+Key SQL tasks included:
+
+* Extracting relevant GA4 e-commerce events
+* Filtering data for the analysis period
+* Selecting traffic-source and traffic-medium attributes
+* Extracting e-commerce transaction and revenue information
+* Creating a user-level funnel dataset
+* Aggregating acquisition-source performance
+* Calculating funnel conversion metrics
+* Creating customer purchase-frequency classifications
+* Preparing campaign-performance datasets
+* Creating source-to-campaign mapping logic
+* Validating analytical control totals
+
+### Excel
+
+Excel was used for exploratory analysis and validation.
+
+Key activities included:
+
+* KPI calculations
+* Pivot tables
+* Funnel analysis
+* Acquisition-source analysis
+* Customer-type analysis
+* Purchase-frequency analysis
+* Campaign-performance analysis
+* Revenue and conversion comparisons
+* Cross-checking totals against BigQuery outputs
+
+Excel was also used as an intermediate validation layer before building the Power BI dashboard.
+
+### Power BI & DAX
+
+Power BI was used to build the interactive analytical dashboard.
+
+Key implementation tasks included:
+
+* Importing analytical tables
+* Creating a dedicated Date table
+* Creating relationships for date-based tables
+* Creating DAX measures
+* Building KPI cards
+* Creating funnel visualizations
+* Building acquisition-source analysis
+* Creating customer-behavior visuals
+* Building campaign-efficiency analysis
+* Adding slicers and interactive filtering
+* Formatting the dashboard for business presentation
+
+### Key DAX Measures
+
+Important measures included:
+
+* Observed Users
+* Observed Sessions
+* Observed Purchases
+* Observed Revenue
+* Observed Conversion Rate
+* Observed AOV
+* Observed Revenue per User
+* View to Cart Rate
+* Cart to Checkout Rate
+* Checkout to Purchase Rate
+* Purchasing Customers
+* Repeat Customers
+* Repeat Customer Rate
+* Revenue per Purchasing Customer
+* Simulated CTR
+* Simulated CPC
+* Simulated Campaign CVR
+* Simulated CAC
+* Simulated ROAS
+
+
+## Limitations & Assumptions
+
+### 1. Public sample data
+
+The observed e-commerce data comes from a public GA4 sample dataset and does not represent a specific real company's complete production environment.
+
+Therefore, findings should be interpreted as analytical observations from the sample rather than conclusions about a real business.
+
+### 2. Simulated advertising data
+
+Advertising spend, campaign conversions, and campaign revenue were simulated for portfolio-analysis purposes.
+
+These values should not be presented as actual advertising performance.
+
+### 3. Campaign attribution limitation
+
+The public GA4 sample does not provide sufficient campaign-level attribution to reliably connect all simulated advertising campaigns with observed purchases and revenue.
+
+Therefore, observed GA4 revenue and simulated campaign revenue were intentionally kept separate.
+
+### 4. User aggregation
+
+The user-level funnel table represents users across the complete analysis period.
+
+Therefore, it is not appropriate to treat the user-level table as a daily time-series dataset.
+
+Date-based analysis was therefore performed using the dedicated date-level performance table where applicable.
+
+### 5. Purchase-event interpretation
+
+Purchase frequency is based on recorded purchase events in the dataset.
+
+It should not automatically be interpreted as the number of unique orders without additional transaction-level validation.
+
+### 6. Source-level user counts
+
+Users aggregated by acquisition source and medium may be counted in multiple source/medium groups.
+
+Therefore, source-level user totals should not be interpreted as a unique-user total for the entire dataset.
+
+### 7. Portfolio purpose
+
+The project is designed to demonstrate an end-to-end marketing analytics workflow involving data extraction, transformation, validation, visualization, and business interpretation.
+
+It is not intended to reproduce the internal reporting environment of a specific organization.
+
+
+## Project Workflow
+
+The project followed a structured end-to-end analytics workflow:
+
+**1. Define the Business Problem**
+↓
+Identify the marketing, acquisition, funnel, customer, and campaign-performance questions.
+
+**2. Collect the Data**
+↓
+Use the public GA4 e-commerce dataset and create a separate simulated advertising dataset.
+
+**3. Extract & Transform Data in BigQuery**
+↓
+Use SQL to filter events, extract relevant attributes, create analytical tables, and calculate core metrics.
+
+**4. Validate the Data**
+↓
+Check row counts, users, sessions, purchases, revenue, and other control totals.
+
+**5. Analyze in Excel**
+↓
+Create KPIs, pivot tables, funnel analysis, customer analysis, acquisition analysis, and campaign analysis.
+
+**6. Build the Power BI Data Model**
+↓
+Import analytical tables, create the Date table, establish appropriate relationships, and create DAX measures.
+
+**7. Build the Dashboard**
+↓
+Create four analytical pages:
+
+* Executive Overview
+* Campaign Performance
+* Marketing Funnel
+* Customer & Acquisition
+
+**8. Interpret the Results**
+↓
+Identify acquisition patterns, funnel drop-offs, customer behavior, and simulated campaign-performance differences.
+
+**9. Develop Business Recommendations**
+↓
+Translate analytical findings into potential actions for improving conversion, customer retention, acquisition analysis, and marketing measurement.
+
+**10. Perform Final QA**
+↓
+Validate calculations, visual consistency, filtering behavior, metric definitions, and the separation between observed and simulated data.
+
+## Project Deliverables
+
+The project produced the following analytical deliverables:
+
+### 1. BigQuery SQL Analysis
+
+SQL scripts and analytical tables covering:
+
+* Raw GA4 event extraction
+* Marketing funnel events
+* User-level funnel analysis
+* Acquisition-source analysis
+* Customer analysis
+* Campaign-performance analysis
+* Integrated marketing-performance analysis
+
+### 2. Excel Analysis Workbook
+
+The Excel workbook contains:
+
+* Data documentation
+* Funnel analysis
+* Acquisition analysis
+* Customer analysis
+* Purchase-frequency analysis
+* Campaign-performance analysis
+* KPI summaries
+* Pivot-table analysis
+* Data validation and control totals
+
+### 3. Power BI Dashboard
+
+The final Power BI dashboard contains four pages:
+
+**Executive Overview**
+Provides a high-level view of observed e-commerce performance and simulated advertising performance.
+
+**Campaign Performance**
+Analyzes simulated campaign efficiency using CTR, CPC, CVR, CAC, ROAS, spend, conversions, and revenue.
+
+**Marketing Funnel**
+Analyzes the observed customer journey from product views through purchase.
+
+**Customer & Acquisition**
+Analyzes customer types, purchase frequency, acquisition sources, revenue contribution, revenue per user, and source-level AOV.
+
+### 4. Business Insights & Recommendations
+
+The analysis produces findings related to:
+
+* Acquisition-source performance
+* Funnel drop-offs
+* Customer retention
+* Purchase frequency
+* Revenue contribution
+* Simulated campaign efficiency
+
+These findings are translated into potential business actions and areas for further investigation.
+
+## Tech Stack
+
+| Technology                               | Role in the Project                                                                        |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Google BigQuery**                      | Cloud-based data storage, querying, transformation, and analytical table creation          |
+| **SQL**                                  | Data extraction, filtering, aggregation, transformation, KPI calculation, and validation   |
+| **Microsoft Excel**                      | Exploratory analysis, KPI validation, pivot tables, funnel analysis, and customer analysis |
+| **Power BI**                             | Interactive dashboard development and business visualization                               |
+| **DAX**                                  | Creation of analytical measures and calculated metrics in Power BI                         |
+| **Google Analytics 4 (GA4) sample data** | Source of observed e-commerce events, acquisition data, customer behavior, and revenue     |
+
+## Project Outcome
+
+The project transformed raw e-commerce and marketing data into a structured end-to-end analytics solution.
+
+The final solution demonstrates the ability to:
+
+* Extract and transform event-level data using SQL
+* Build analytical datasets at different levels of granularity
+* Analyze customer acquisition and website behavior
+* Measure and interpret marketing-funnel performance
+* Segment customers based on purchase behavior
+* Analyze repeat-customer contribution and purchase frequency
+* Evaluate advertising campaigns using marketing-performance metrics
+* Validate analytical results across multiple tools
+* Build interactive Power BI dashboards using DAX
+* Communicate analytical findings through business insights and recommendations
+* Clearly distinguish observed data from simulated assumptions
+
+The project provides a practical demonstration of how a Data Analyst or Marketing Analyst can move from **raw data → analysis → visualization → insights → business recommendations**.
