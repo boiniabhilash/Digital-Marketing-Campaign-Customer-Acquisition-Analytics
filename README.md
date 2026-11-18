@@ -1,6 +1,6 @@
 # Digital Marketing Campaign & Customer Acquisition Analytics
 
-An end-to-end digital marketing and customer acquisition analytics project for a D2C/e-commerce business using **BigQuery, SQL, Excel, Power BI, and DAX**.
+An end to end digital marketing and customer acquisition analytics project for a D2C/e-commerce business using **BigQuery, SQL, Excel, Power BI, and DAX**.
 
 ##  Project Overview
 
@@ -8,9 +8,9 @@ This project analyzes the complete digital marketing and customer journey from:
 
 **Acquisition → Website Engagement → Marketing Funnel → Conversion → Customers → Revenue → Campaign Performance**
 
-The project combines **public GA4 e-commerce sample data** with a **separately simulated advertising campaign dataset** to demonstrate an end-to-end marketing analytics workflow.
+The project combines **public GA4 e-commerce sample data** with a **separately simulated advertising campaign dataset** to demonstrate an end to end marketing analytics workflow.
 
-A key methodological principle was to keep **observed GA4 performance** and **simulated advertising performance** separate to avoid unsupported campaign-level attribution.
+A key methodological principle was to keep **observed GA4 performance** and **simulated advertising performance** separate to avoid unsupported campaign level attribution.
 
 ---
 
@@ -20,7 +20,7 @@ The business invests in multiple digital marketing channels but lacks a clear vi
 
 * Which acquisition sources generate traffic and revenue
 * Where customers drop off in the purchase funnel
-* How one-time and repeat customers contribute to revenue
+* How one time and repeat customers contribute to revenue
 * How advertising campaigns perform across key efficiency metrics
 * Which areas require further investigation or optimization
 
@@ -35,7 +35,7 @@ The business invests in multiple digital marketing channels but lacks a clear vi
 | **Excel**                   | KPI validation, pivot analysis, funnel and customer analysis |
 | **Power BI**                | Interactive dashboard and business visualization             |
 | **DAX**                     | Measures, KPIs and analytical calculations                   |
-| **GA4 Sample Data**         | Observed e-commerce behavior                                 |
+| **GA4 Sample Data**         | Observed ecommerce behavior                                 |
 | **Simulated Campaign Data** | Advertising performance analysis                             |
 
 ---
@@ -81,9 +81,9 @@ Analyzed the customer journey across:
 
 Key funnel metrics include:
 
-* View-to-Cart Rate
-* Cart-to-Checkout Rate
-* Checkout-to-Purchase Rate
+* View to Cart Rate
+* Cart to Checkout Rate
+* Checkout to Purchase Rate
 * Overall user conversion
 
 ### 3. Customer Analysis
@@ -91,7 +91,7 @@ Key funnel metrics include:
 Analyzed:
 
 * Purchasing customers
-* One-time customers
+* One time customers
 * Repeat customers
 * Repeat customer rate
 * Purchase frequency
@@ -119,9 +119,9 @@ Evaluated simulated advertising campaigns using:
 * **269,989** unique users
 * **5,692** purchase events
 * **$362,165** observed revenue
-* Approximately **2.11%** unique-user purchase conversion
+* Approximately **2.11%** unique user purchase conversion
 * **386,068** product views
-* **58,543** add-to-carts
+* **58,543** add to carts
 * **38,757** checkouts
 
 ### Funnel Performance
@@ -141,7 +141,7 @@ Evaluated simulated advertising campaigns using:
 
 `google / organic` generated the largest observed revenue contribution at approximately **$95,775**.
 
-`shop.googlemerchandisestore.com / referral` generated approximately **$46,521** in observed revenue and showed relatively high revenue per source-level user.
+`shop.googlemerchandisestore.com / referral` generated approximately **$46,521** in observed revenue and showed relatively high revenue per source level user.
 
 ### Simulated Advertising
 
@@ -169,9 +169,9 @@ The Prospecting campaign recorded:
 
 Based on the analysis:
 
-1. Investigate checkout-stage abandonment and identify potential friction points.
-2. Investigate opportunities to improve product-page-to-cart conversion.
-3. Examine high-value acquisition sources for transferable characteristics.
+1. Investigate checkout stage abandonment and identify potential friction points.
+2. Investigate opportunities to improve product page to cart conversion.
+3. Examine high value acquisition sources for transferable characteristics.
 4. Develop strategies to increase repeat purchases and customer lifetime value.
 5. Monitor campaign performance using CTR, CPC, CVR, CAC and ROAS together rather than relying on a single metric.
 6. Investigate changes in monthly revenue and funnel performance.
@@ -185,7 +185,7 @@ The project uses two distinct data sources:
 
 **Observed Data**
 
-Public GA4 e-commerce sample data covering:
+Public GA4 ecommerce sample data covering:
 
 **November 1, 2020 – January 31, 2021**
 
@@ -197,7 +197,7 @@ The simulated advertising dataset was created for portfolio demonstration purpos
 
 **Observed GA4 revenue and simulated campaign revenue were not combined.**
 
-Campaign-level attribution to the public GA4 dataset was not assumed where the available data did not support it.
+Campaign level attribution to the public GA4 dataset was not assumed where the available data did not support it.
 
 ---
 
